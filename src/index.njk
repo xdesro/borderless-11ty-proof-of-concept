@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Projects</h1>
+    {% for project in projects %}
+    <article>
+        <img style="height: 10rem" srcSet="{{ project.heroImage.srcSet }}" />
+        <h1>{{ project.title}}</h1>
+        <a href="/projects/{{ project.title | slug }}/index.html">View project</a>
+    </article>
+    <hr />
+    {% endfor %}
+    <!-- {{ projects | dump }} -->
+
+</body>
+</html>
