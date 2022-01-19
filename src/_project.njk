@@ -1,9 +1,12 @@
 ---
+layout: layouts/base.njk
 pagination:
   data: projects
   size: 1
   alias: project
 permalink: "/projects/{{ project.title | slug }}/index.html"
+eleventyComputed:
+    title: "Project: {{ project.title }}"
 ---
 <style>
 img {
